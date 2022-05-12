@@ -4,13 +4,31 @@
       "id": 1,
       "firstname": "Ogwuru",
       "lastname": "Patrick",
-      "state": ""
+      "state": "Added"
     },
     {
       "firstname": "Linda",
       "lastname": "Grote",
-      "state": "In-check",
+      "state": "Approved",
       "id": 2
+    },
+    {
+      "firstname": "JP",
+      "lastname": "JP",
+      "state": "Approved",
+      "id": 3
+    },
+    {
+      "firstname": "Johnny",
+      "lastname": "Dev",
+      "state": "Added",
+      "id": 4
+    },
+    {
+      "firstname": "Johanna",
+      "lastname": "Keeps",
+      "state": "Approved",
+      "id": 5
     }
   ]
 }

@@ -1,6 +1,6 @@
 const Header: React.FC = () => {
   return (
-    <div className="flex justify-end w-full border-b border-slate-500 bg-slate-700">
+    <div className="flex justify-end w-full border-b border-slate-600 bg-slate-700">
       <ul className="flex justify-around gap-8 p-3 pr-10 text-gray-400">
         <li className="hover:text-gray-200">
           <svg
