@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* sidebar component */
+.sidebar {
+  @apply transition-all cursor-pointer hover:text-slate-100 hover:scale-100 hover:duration-300;
+}
+
+/* employees styling*/
+.employees {
+  @apply relative flex flex-row items-center justify-around h-20 mx-10 border rounded-lg hover:bg-gray-50;
+}
+
+/* employee state styling */
+.states {
+  @apply p-2 bg-red-300;
+  /* remember to remove the hover */
+}
+.active-states {
+  @apply p-2 bg-green-300;
+  /* remember to remove the hover */
+}
+
+/* form group styling */
+.form {
+  @apply flex flex-col w-full gap-10 p-2 border;
+}
+.form-span {
+  @apply flex items-center justify-between p-2;
+}
+.form-input {
+  @apply justify-between w-3/4 p-2 rounded-md ring-1;
+}
+.submit {
+  @apply w-3/4 p-2 rounded-md ring-1 hover:bg-slate-700 hover:text-slate-300;
+}
+
+/* StateBar */
+.state-bar {
+  @apply relative flex items-center w-32 h-10 px-3 py-2 overflow-hidden bg-purple-600 border border-gray-500;
+}
+
+/* StateBar active */
+.state-active {
+  @apply relative z-50 flex items-center justify-center w-40 h-12 px-4 py-2 capitalize bg-blue-500 border border-gray-200 rounded-tr-full rounded-br-full hover:bg-gray-300;
+}
+
+/* StateBar inactive */
+.state-active-start {
+  @apply relative z-50 flex items-center justify-center w-40 h-12 px-4 py-2 bg-gray-200 border border-gray-200 rounded-tr-full rounded-br-full hover:bg-gray-300;
+}
+
+.state-inactive {
+  @apply relative flex items-center justify-center w-40 h-12 px-4 py-4 overflow-hidden border border-gray-200 rounded-tr-full rounded-br-full hover:bg-gray-200 bg-gray-50;
+}
+
+.state-active-end {
+  @apply relative z-10 flex items-center justify-center w-40 h-12 px-4 py-2 overflow-hidden border border-gray-200 hover:bg-gray-200 bg-gray-50 rounded-tr-md rounded-br-md right-28;
+}
