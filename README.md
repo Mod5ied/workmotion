@@ -18,6 +18,7 @@ $ yarn add vite || npm i vite
 
 - Tailwindcss for styling.
 - Some assets such as icons from [HeroIcons](https://heroicons.com/), some looong SVGs.
+- Some form elements from [MUI](https://mui.com/material-ui/react-text-field)
 
 ## Setting Up Your Project
 - To scaffold your react app and get it running with vite, run the commands in sequence:
@@ -38,7 +39,7 @@ $ yarn add react-router-dom json-server
 Finally, install your Dev-dependencies
 
 ```bash
-$ yarn add -D tailwindcss@latest autoprefixer@latest postcss@latest
+$ yarn add -D tailwindcss@latest autoprefixer@latest postcss@latest @mui/material @emotion/react @emotion/styled
 ```
 
 ### Remember to check package.json file for any detail, and especially if you wish to install specific npm package versions (Recommend!)
