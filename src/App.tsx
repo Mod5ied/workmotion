@@ -43,7 +43,7 @@ const App: React.FC = () => {
   //fetch employee records on initial load.
   useEffect(() => {
     getRecords(); //react18 useEffect runs quite odd these days!
-  }, []); //array dependency prevents StateBar from instant re-render.
+  }, [employees]); //array dependency prevents StateBar from instant re-render.
 
   //fetch records function. {quite reusable to a degree.}
   const fetchRecords: Fetch = async () => {
