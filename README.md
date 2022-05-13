@@ -9,7 +9,7 @@ $ yarn add vite || npm i vite
 ```
 
 ### Whats Included as Dependencies
-- React 18 with TypeScript (Yea, I know crazy huh) 😄
+- React 17 with TypeScript 😄
 - A basic API client powered by JSON-server
 - A basic [ESLint](https://github.com/eslint/eslint) configuration
 - React Router ^6.3.0
