@@ -30,7 +30,7 @@ const App: React.FC = () => {
       headers: {
         "Content-type": "application/json",
       },
-      body: JSON.stringify(record), //converts js object to a json string.
+      body: JSON.stringify(record),
     });
     const data = await res.json();
 
@@ -42,8 +42,8 @@ const App: React.FC = () => {
   };
   //fetch employee records on initial load.
   useEffect(() => {
-    getRecords(); //react18 useEffect runs quite odd these days!
-  }, [employees]); //array dependency prevents StateBar from instant re-render.
+    getRecords(); /* react18 useEffect runs quite odd these days! */
+  }, [employees]);
 
   //fetch records function. {quite reusable to a degree.}
   const fetchRecords: Fetch = async () => {
@@ -88,6 +88,7 @@ const App: React.FC = () => {
             <Route
               path="/"
               element={
+                //@ts-ignore
                 <EmployeeCards employees={employees} onUpdate={updateState} />
               }
             >
@@ -95,10 +96,9 @@ const App: React.FC = () => {
             </Route>
             <Route
               path="/employee/add"
+              //@ts-ignore
               element={<CreateEmployee onRecord={createEmployee} />}
-            >
-              {/* routes for adding employee */}
-            </Route>
+            ></Route>
           </Routes>
         </div>
       </div>
