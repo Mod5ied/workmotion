@@ -47,5 +47,5 @@ $ yarn add -D @mui/material @emotion/react @emotion/styled
 
 ## Tough Decisions made during Development:
 
-- The use of Tailwindcss and MUI: I understand most engineers have reservations when it comes to using CSS frameworks, I do too, but having less time, I had to make a tough decision. But I encourage a discussion team on their preferences so as to have a good understanding of our workflow patterns and avoid friction.
+- The use of Tailwindcss and MUI: I understand most engineers have reservations when it comes to using CSS frameworks, I do too, but having less time I had to opt for them. But I encourage a discussion with the team on their preferences so as to have a good understanding of our workflow patterns and avoid friction.
 - Due to the time constraint, I delegated more time to logic and pleasing typescript😄, hence made a quite interesting but overall good shifted-replica of the [provided picture](which had pointed edges), but I opted for a rounded edge since they were faster to create, and had a more subtle design for a "Simple UI". But I believe I can do better with more time.
