@@ -36,10 +36,18 @@ $ yarn dev
 $ yarn add react-router-dom json-server tailwindcss@latest autoprefixer@latest postcss@latest
 ```
 
-Finally, install as Dev-dependencies or CoreDeps.
+Last but not least, install as Dev-dependencies or CoreDeps and initialize tailwind and postcss.
 
 ```bash
 $ yarn add -D @mui/material @emotion/react @emotion/styled
+```
+```bash
+$ npx tailwindcss init -p  /* initializes tailwind and postcss configs */
+````
+Finally, edit the tailwind.config to purge all js, ts, jsx and tsx files on bundle.
+
+```bash
+$ content["./src/**/*.{js,jsx,ts/tsx}"]
 ```
 
 ### Remember to check package.json file for any detail, and especially if you wish to install specific npm package versions (Recommend!)
@@ -47,5 +55,4 @@ $ yarn add -D @mui/material @emotion/react @emotion/styled
 
 ## Tough Decisions made during Development:
 
-- The use of Tailwindcss and MUI: I understand most engineers have reservations when it comes to using CSS frameworks, I do too, but having less time I had to opt for them. But I encourage a discussion with the team on their preferences so as to have a good understanding of our workflow patterns and avoid friction.
-- Due to the time constraint, I delegated more time to logic and pleasing typescript😄, hence made a quite interesting but overall good shifted-replica of the [provided picture](which had pointed edges), but I opted for a rounded edge since they were faster to create, and had a more subtle design for a "Simple UI". But I believe I can do better with more time.
+- The use of Tailwindcss and MUI: I understand most engineers have reservations when it comes to using CSS frameworks, I do too. But then, I encourage a discussion with the team on their preferences so as to have a good understanding of our workflow patterns and avoid friction.
