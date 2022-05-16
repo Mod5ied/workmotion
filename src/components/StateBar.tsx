@@ -32,78 +32,96 @@ const StateBar: React.FC<Props> = ({ state, id, onUpdate }) => {
   };
   // we could also clear the states on dblClick {that would be cool😄}.
   return (
-    <div className="flex p-3 border ">
-      <div
-        /* each renders styles conditionally based on {state👆} hence, persists. */
-        className={
-          state == states.stateOne ? "state-active" : "state-active-start"
-        }
-      >
-        <button
-          onClick={() => handleUpdate(id, states.stateOne)}
-          className="w-full"
+    <>
+      {/* Bridge */}
+      <div className="w-full m-auto ">
+        <div
+          id="container"
+          className="flex justify-center w-full p-2 cursor-pointer"
         >
-          {states.stateOne}
-        </button>
+          <span className={state == states.stateOne ? "spans-active" : "spans"}>
+            <div className="para">
+              <button
+                className={`lowercase ${
+                  state == states.stateOne ? "uppercase" : "lowercase"
+                }`}
+                onClick={() => handleUpdate(id, states.stateOne)}
+              >
+                {states.stateOne}
+              </button>
+            </div>
+            <div
+              className={`z-20 bg-gray-300 triangles ${
+                state == states.stateOne ? "triangles-active" : "triangles"
+              }`}
+            ></div>
+          </span>
+
+          <span
+            className={`relative right-6 ${
+              state == states.stateTwo ? "spans-active" : "spans"
+            }`}
+          >
+            <div className="para">
+              <button onClick={() => handleUpdate(id, states.stateTwo)}>
+                {states.stateTwo}
+              </button>
+            </div>
+            <div
+              className={`z-30 bg-white  ${
+                state == states.stateTwo ? "triangles-active" : "triangles"
+              }`}
+            ></div>
+          </span>
+
+          <span
+            className={`relative right-12 ${
+              state == states.stateThree ? "spans-active" : "spans"
+            }`}
+          >
+            <div className="para">
+              <button onClick={() => handleUpdate(id, states.stateThree)}>
+                {states.stateThree}
+              </button>
+            </div>
+            <div
+              className={`z-40 bg-white ${
+                state == states.stateThree ? "triangles-active" : "triangles"
+              }`}
+            ></div>
+          </span>
+
+          <span
+            className={`relative right-20 ${
+              state == states.stateFour ? "spans-active" : "spans"
+            }`}
+          >
+            <div className="para">
+              <button onClick={() => handleUpdate(id, states.stateFour)}>
+                {states.stateFour}
+              </button>
+            </div>
+            <div
+              className={`z-50 bg-white ${
+                state == states.stateFour ? "triangles-active" : "triangles"
+              }`}
+            ></div>
+          </span>
+
+          <span
+            className={`relative z-30 right-28 ${
+              state == states.stateFive ? "spans-active" : "spans"
+            } `}
+          >
+            <div className="para">
+              <button onClick={() => handleUpdate(id, states.stateFive)}>
+                {states.stateFive}
+              </button>
+            </div>
+          </span>
+        </div>
       </div>
-      <div
-        className={
-          state == states.stateTwo
-            ? "state-active right-8 z-40"
-            : "z-40 state-inactive right-8"
-        }
-      >
-        <button
-          onClick={() => handleUpdate(id, states.stateTwo)}
-          className="w-full ml-6"
-        >
-          {states.stateTwo}
-        </button>
-      </div>
-      <div
-        className={
-          state == states.stateThree
-            ? "state-active right-14 z-30"
-            : "z-30 state-inactive right-14"
-        }
-      >
-        <button
-          onClick={() => handleUpdate(id, states.stateThree)}
-          className="w-full ml-5"
-        >
-          {states.stateThree}{" "}
-        </button>
-      </div>
-      <div
-        className={
-          state == states.stateFour
-            ? "state-active right-20 z-20"
-            : "z-20 state-inactive right-20"
-        }
-      >
-        <button
-          onClick={() => handleUpdate(id, states.stateFour)}
-          className="w-full ml-6"
-        >
-          {" "}
-          {states.stateFour}{" "}
-        </button>
-      </div>
-      <div
-        className={
-          state == states.stateFive
-            ? "state-active right-28 z-10"
-            : "state-active-end"
-        }
-      >
-        <button
-          onClick={() => handleUpdate(id, states.stateFive)}
-          className="w-full"
-        >
-          {states.stateFive}{" "}
-        </button>
-      </div>
-    </div>
+    </>
   );
 };
 

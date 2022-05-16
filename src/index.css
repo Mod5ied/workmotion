@@ -1,10 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;500;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* * {
-  outline: 1px solid red;
-} */
+* {
+  @apply font-body;
+}
 
 /* sidebar component */
 .sidebar {
@@ -13,17 +14,15 @@
 
 /* employees styling*/
 .employees {
-  @apply relative flex flex-row items-center justify-around h-20 mx-10 border rounded-lg hover:bg-gray-50;
+  @apply relative flex flex-row items-center justify-between h-20 mx-10 border rounded-lg hover:bg-gray-50;
 }
 
 /* employee state styling */
 .states {
   @apply p-2 bg-red-300;
-  /* remember to remove the hover */
 }
 .active-states {
   @apply p-2 bg-green-300;
-  /* remember to remove the hover */
 }
 
 /* form group styling */
@@ -60,5 +59,31 @@
 }
 
 .state-active-end {
-  @apply relative z-10 flex items-center justify-center w-40 h-12 px-4 py-2 overflow-hidden border border-gray-200  bg-gray-50 rounded-tr-md rounded-br-md right-28;
+  @apply relative z-10 flex items-center justify-center w-40 h-12 px-4 py-2 overflow-hidden border border-gray-200 bg-gray-50 rounded-tr-md rounded-br-md right-28;
+}
+
+/*  */
+.spans {
+  @apply flex items-center justify-between w-full overflow-hidden bg-white;
+}
+.spans-active {
+  @apply flex items-center justify-between w-full overflow-hidden bg-blue-500;
+}
+.spans:first-child {
+  @apply bg-gray-300;
+}
+
+.triangles {
+  @apply relative w-10 h-10 rotate-45 border-t border-r right-3;
+}
+
+.triangles-active {
+  @apply relative w-10 h-10 rotate-45 bg-blue-500 border-t border-r right-3;
+}
+
+.para {
+  @apply ml-12 text-sm;
+}
+.para p {
+  @apply flex items-center h-10 hover:uppercase;
 }
